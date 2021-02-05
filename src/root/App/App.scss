@@ -1,1 +1,9 @@
+@import "src/styles/constants";
 
+.appWrapper {
+  position: absolute;
+  width: 97%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $white-main;
+}

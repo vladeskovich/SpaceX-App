@@ -4,8 +4,9 @@ import {
   InMemoryCache,
   ApolloProvider,
 } from '@apollo/client';
-import { useLocation, useRouteMatch } from 'react-router-dom';
+import {useLocation, useRouteMatch} from 'react-router-dom';
 import LaunchList from '../../components/LaunchList/LaunchList';
+import Header from "../../components/Header";
 import styles from './App.scss';
 
 const client = new ApolloClient({
@@ -15,7 +16,10 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <LaunchList/>
+    <div className={styles.appWrapper}>
+      <Header/>
+      <LaunchList/>
+    </div>
   </ApolloProvider>
 );
 

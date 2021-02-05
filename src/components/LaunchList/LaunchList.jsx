@@ -1,13 +1,12 @@
 import React from 'react';
 import { useQuery } from '@apollo/client';
 import { GET_LAUNCHES } from './queries';
+import styles from './LaunchList.scss';
 
 const LaunchList = (props) => {
   const { loading, error, data } = useQuery(GET_LAUNCHES);
   console.log(data);
-  return (
-    <h1>Hello</h1>
-  );
+  return null;
 };
 
 export default LaunchList;
