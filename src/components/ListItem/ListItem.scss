@@ -1,0 +1,31 @@
+.launchItem {
+  width: 240px;
+  border: 1px solid #BDBDBD;
+  box-sizing: border-box;
+  border-radius: 10px;
+  font-size: 18px;
+
+  .launchItemInfo {
+    padding: 26px 20px 32px 20px;
+
+    .launchItemInfo__name {
+      padding: 20px 0 16px 0;
+      font-size: 24px;
+      font-weight: 600;
+    }
+
+    .launchItemInfo__rocketName {
+      padding-bottom: 8px;
+
+      span {
+        color: #686868;
+      }
+    }
+
+    .launchItemInfo__launchSuccess {
+      span {
+        color: #686868;
+      }
+    }
+  }
+}
