@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from "../Image";
-import Typography from "../Typography";
+import Image from '../Image';
+import Typography from '../Typography';
 import './ImageBox.scss';
 
-const ImageBox = () => {
-
+const ImageBox = ({ images }) => {
+  console.log(images);
   return (
     <div className="launch-image-box">
       <div className="launch-image-box__top-bar">

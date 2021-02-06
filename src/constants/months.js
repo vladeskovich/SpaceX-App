@@ -1,4 +1,4 @@
-const months = [
+const MONTHS = [
   'января',
   'февраля',
   'марта',
@@ -12,3 +12,5 @@ const months = [
   'ноября',
   'декабря',
 ];
+
+export default MONTHS;

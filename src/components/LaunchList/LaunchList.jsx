@@ -6,7 +6,7 @@ import { GET_LAUNCHES } from './queries';
 import ListItem from '../ListItem';
 import './LaunchList.scss';
 
-const LaunchList = (props) => {
+const LaunchList = () => {
   const { loading, error, data } = useQuery(GET_LAUNCHES);
   console.log(loading, data);
   return <div className="list-launch">
