@@ -4,12 +4,12 @@ import MagicGrid from 'magic-grid-react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import { GET_LAUNCHES } from './queries';
 import ListItem from '../ListItem';
-import styles from './LaunchList.scss';
+import './LaunchList.scss';
 
 const LaunchList = (props) => {
   const { loading, error, data } = useQuery(GET_LAUNCHES);
   console.log(loading, data);
-  return <>
+  return <div className="list-launch">
     {!loading && (
       <ResponsiveMasonry
         columnsCountBreakPoints={{
@@ -24,7 +24,7 @@ const LaunchList = (props) => {
       </ResponsiveMasonry>
     )
     }
-  </>;
+  </div>;
 };
 
 export default LaunchList;

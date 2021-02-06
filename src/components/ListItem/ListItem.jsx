@@ -7,20 +7,21 @@ import getDateFromStrings from '../../utils/getDateFromStrings';
 import './ListItem.scss';
 
 const ListItem = ({
-  mission_name,
-  launch_date_local,
-  rocket,
+  mission_name: missionName,
+  launch_date_local: launchDate,
+  rocket: { rocket_name: rocketName },
   links,
 }) => {
-  const { day, month, year } = getDateFromStrings();
+  const { day, month, year } = getDateFromStrings(launchDate);
+
   return (
     <div className="launch">
     <ImageBox images={links}/>
     <div className="launch__item-info">
       <Typography className="launch__item-info__date">13 декабря 2020</Typography>
-      <Typography className="launch__item-info__name">Starlink-15 (v1.0)</Typography>
+      <Typography className="launch__item-info__name">{missionName}</Typography>
       <Typography className="launch__item-info__rocket-name">
-        <span>Ракета</span> {rocket}
+        <span>Ракета</span> {rocketName}
       </Typography>
       <Typography className="launch__item-info__launch-success">
         <span>Результат:</span> успех

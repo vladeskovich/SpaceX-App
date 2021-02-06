@@ -1,8 +1,13 @@
-export default (data) => {
-  const hours = Math.trunc(min / 60);
-  const minutes = min % 60;
+export default (dateString) => {
+  const date = new Date(dateString);
+
+  const day = date.getDate();
+  const month = date.getDay();
+  const year = date.getFullYear();
+
   return {
-    hours,
-    minutes,
+    day,
+    month,
+    year,
   };
 };
