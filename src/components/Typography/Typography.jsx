@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import styles from './Typography.scss';
+import './Typography.scss';
 
 const VARIANTS = {
   body: 'p',
@@ -14,7 +14,7 @@ const Typography = ({
   className,
   children,
 }) => {
-  const classes = classNames(styles.typography, className);
+  const classes = classNames('typography', className);
   const Component = VARIANTS[variant];
 
   return (

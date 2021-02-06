@@ -7,7 +7,7 @@ import {
 import {useLocation, useRouteMatch} from 'react-router-dom';
 import LaunchList from '../../components/LaunchList/LaunchList';
 import Header from "../../components/Header";
-import styles from './App.scss';
+import './App.scss';
 
 const client = new ApolloClient({
   uri: 'https://api.spacex.land/graphql',
@@ -16,7 +16,7 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div className={styles.appWrapper}>
+    <div className="appWrapper">
       <Header/>
       <LaunchList/>
     </div>
