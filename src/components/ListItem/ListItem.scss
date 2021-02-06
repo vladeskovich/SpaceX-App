@@ -1,13 +1,16 @@
-.container {
+@import "src/styles/constants";
+
+.launch {
   width: 240px;
+  padding: 5px 5px 0 5px;
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
   border-radius: 10px;
   font-size: 18px;
 
-
-  .launchItemInfo {
-    padding: 26px 20px 32px 20px;
+  .launch__item-info {
+    position: relative;
+    padding: 26px 15px 32px 15px;
 
     &__name {
       padding: 20px 0 16px 0;
@@ -15,15 +18,16 @@
       font-weight: 600;
     }
 
-    &__rocketName {
+    &__rocket-name {
       padding-bottom: 8px;
 
       span {
         color: #686868;
       }
     }
-  //дать имя класса
-    &__launchSuccess {
+
+    //дать имя класса
+    &__launch-success {
       span {
         color: #686868;
       }

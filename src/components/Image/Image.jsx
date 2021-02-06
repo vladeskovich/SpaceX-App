@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import styles from './Image.scss';
+import './Image.scss';
 
 const Image = ({
   className,
   src,
 }) => {
-  const classes = classNames(styles.image, className);
+  const classes = classNames('image', className);
 
   return (
     <img
