@@ -9,6 +9,7 @@ import './LaunchList.scss';
 const LaunchList = () => {
   const { loading, error, data } = useQuery(GET_LAUNCHES);
   console.log(loading, data);
+
   return <div className="list-launch">
     {!loading && (
       <ResponsiveMasonry
@@ -17,8 +18,11 @@ const LaunchList = () => {
         }}
       >
         <Masonry gutter={16}>
-          {data.launchesPast.map((launch) => (
-            <ListItem {...launch}/>
+          {data.launchesPast.map((launch, index) => (
+            <ListItem
+              key={index}
+              {...launch}
+            />
           ))}
         </Masonry>
       </ResponsiveMasonry>

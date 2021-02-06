@@ -9,6 +9,7 @@ import './ListItem.scss';
 const ListItem = ({
   missionName,
   launchDate,
+  launchSuccess,
   rocket: { rocketName },
   links: { launchImages },
 }) => {
@@ -23,7 +24,7 @@ const ListItem = ({
       <Typography className="launch__item-info__rocket-name">
         <span>Ракета</span> {rocketName}
       </Typography>
-      <Typography className="launch__item-info__launch-success">
+      <Typography className="launch__item-info__launch-status">
         <span>Результат:</span> успех
       </Typography>
     </div>

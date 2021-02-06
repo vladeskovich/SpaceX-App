@@ -1,7 +1,7 @@
 @import "src/styles/constants";
 
 .launch {
-  width: 240px;
+  width: 100%;
   padding: 5px 5px 0 5px;
   border: 1px solid #BDBDBD;
   box-sizing: border-box;
@@ -27,7 +27,7 @@
     }
 
     //дать имя класса
-    &__launch-success {
+    &__launch-status {
       span {
         color: #686868;
       }

@@ -14,19 +14,9 @@ export const GET_LAUNCHES = gql`
     }
     rocket {
       rocketName: rocket_name
-      second_stage {
-        payloads {
-          payload_type
-          payload_mass_kg
-          payload_mass_lbs
-        }
-      }
     }
-    ships {
-      name
-      home_port
-      image
-    }
+    launchSuccess: launch_success
+    id
   }
   }
 `;
