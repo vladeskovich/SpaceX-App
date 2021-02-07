@@ -56,13 +56,7 @@ module.exports = {
           },
           {
             loader: 'css-loader',
-            options: {
-              modules: {
-                exportLocalsConvention: 'camelCase',
-                localIdentName: '[name]__[local]_[hash:base64:5]',
-                mode: 'local',
-              },
-            },
+
           }, 'sass-loader',
           {
             loader: 'sass-loader',

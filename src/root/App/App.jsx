@@ -3,10 +3,12 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
+  ApolloConsumer,
 } from '@apollo/client';
 import { useLocation, useRouteMatch } from 'react-router-dom';
-import LaunchList from '../../components/LaunchList/LaunchList';
-import styles from './App.scss';
+import Header from '../../components/Header';
+import Routes from '../../components/Routes';
+import './App.scss';
 
 const client = new ApolloClient({
   uri: 'https://api.spacex.land/graphql',
@@ -15,7 +17,10 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <LaunchList/>
+    <div className="appWrapper">
+      <Header/>
+      <Routes/>
+    </div>
   </ApolloProvider>
 );
 

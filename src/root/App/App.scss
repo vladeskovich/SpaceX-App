@@ -1,1 +1,12 @@
+@import "src/styles/constants";
 
+.appWrapper {
+  position: absolute;
+  max-width: 1184px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8px 0 8px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background-color: $white-main;
+}
