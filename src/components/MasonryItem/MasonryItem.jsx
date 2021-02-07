@@ -15,11 +15,3 @@ const MasonryItem = ({ data, children }) => (
 );
 
 export default MasonryItem;
-
-/*
-{data.map((launch, index) => (
-  React.cloneElement(children, {
-    key: index,
-    ...launch,
-  })
-))} */

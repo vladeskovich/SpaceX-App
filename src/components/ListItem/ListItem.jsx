@@ -23,7 +23,7 @@ const ListItem = ({
     const { currentTarget: { dataset: { itemIndex } } } = event;
 
     history.push(`/launch/${itemIndex}`);
-  }, []);
+  }, [history]);
 
   return (
     <div

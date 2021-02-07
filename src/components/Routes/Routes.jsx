@@ -16,9 +16,6 @@ const routes = [
     exact: true,
     component: LaunchDetail,
   },
-  /* {
-    component: NotFound,
-  }, */
 ];
 
 const Routes = (props) => (

@@ -1,0 +1,53 @@
+.launch-detail {
+  width: 100%;
+
+  &-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    border: 1px solid #BDBDBD;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin: 16px 0 16px 0;
+
+    &__nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 174px;
+      border-right: 1px solid #BDBDBD;
+      cursor: pointer;
+
+      &:hover &_back {
+        color: #008AB7;
+      }
+
+      &_back {
+        padding: 0 16px;
+      }
+    }
+
+
+    &__info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      padding: 16px 0 20px 18px;
+
+      &__name {
+        font-size: 36px;
+        font-weight: 600;
+        margin-right: 16px;
+      }
+
+      &__date {
+        margin-right: 16px;
+      }
+
+      &__rocket-name {
+        margin-right: 16px;
+      }
+    }
+  }
+}
