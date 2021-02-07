@@ -7,6 +7,11 @@
   box-sizing: border-box;
   border-radius: 10px;
   font-size: 18px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #008AB7;
+  }
 
   .launch__item-info {
     position: relative;
