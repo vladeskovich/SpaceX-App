@@ -11,7 +11,7 @@ const LaunchList = () => {
   return <div className="list-launch">
     {!loading && (
       <MasonryItem data={data.launchesPast}>
-        <ListItem/>
+        {(launch, key) => <ListItem {...launch} key={key}/>}
       </MasonryItem>
     )
     }

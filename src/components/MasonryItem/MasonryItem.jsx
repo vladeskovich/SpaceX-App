@@ -9,14 +9,17 @@ const MasonryItem = ({ data, children }) => (
       }}
     >
       <Masonry gutter={16}>
-        {data.map((launch, index) => (
-          React.cloneElement(children, {
-            key: index,
-            ...launch,
-          })
-        ))}
+        {data.map((launch, index) => children(launch, index))}
       </Masonry>
     </ResponsiveMasonry>
 );
 
 export default MasonryItem;
+
+/*
+{data.map((launch, index) => (
+  React.cloneElement(children, {
+    key: index,
+    ...launch,
+  })
+))} */
