@@ -1,26 +1,52 @@
 import React, { useCallback } from 'react';
 import { useQuery } from '@apollo/client';
 import { useParams, useHistory } from 'react-router-dom';
+
 import { GET_LAUNCH_IMAGES } from './queries';
+
 import MasonryItem from '../MasonryItem';
 import Typography from '../Typography';
 import Image from '../Image';
+
+import getFormattingDate from '../../utils/getFormattingDate';
+import getStatusLaunch from '../../utils/getStatusLaunch';
+
 import './LaunchDetail.scss';
 
 const LaunchDetail = () => {
   const { launchId } = useParams();
   const history = useHistory();
 
-  const { loading, error, data } = useQuery(GET_LAUNCH_IMAGES, {
-    variables: { id: launchId },
+  const {
+    loading,
+    data,
+  } = useQuery(GET_LAUNCH_IMAGES, {
+    variables: {
+      id: launchId,
+    },
   });
 
-  const { launch: { links: { launchImages = [] } = {} } = {} } = data || {};
   const {
     launch: {
-      date, missionName, rocket: { rocketName } = {}, launchSuccess,
+      links: {
+        launchImages = [],
+      } = {},
     } = {},
   } = data || {};
+
+  const {
+    launch: {
+      launchDate,
+      missionName,
+      launchSuccess,
+      rocket: {
+        rocketName,
+      } = {},
+    } = {},
+  } = data || {};
+
+  const date = getFormattingDate(launchDate);
+  const launchStatus = getStatusLaunch(launchSuccess);
 
   const clickItemHandler = useCallback(() => {
     history.push('/');
@@ -38,13 +64,15 @@ const LaunchDetail = () => {
               <Typography className="launch-detail-header__nav_back">Назад к списку</Typography>
             </nav>
             <div className="launch-detail-header__info">
-              <Typography className="launch-detail-header__info__name">{missionName}</Typography>
-              <Typography className="launch-detail-header__info__date">{date}</Typography>
-              <Typography className="launch-detail-header__info__rocket-name">
-                <span>Ракета</span> {rocketName}
+              <Typography className="name">{missionName}</Typography>
+              <Typography className="date">{date}</Typography>
+              <Typography className="rocket-name">
+                <span className="rocket-name_emphasis-text">Ракета</span> {rocketName}
               </Typography>
-              <Typography className="launch-detail-header__info__launch-status">
-                <span>Результат:</span> успех
+              <Typography className="launch-status">
+                <span className="launch-status_emphasis-text">
+                  Результат:</span>
+                  {launchStatus}
               </Typography>
             </div>
           </div>
