@@ -5,9 +5,6 @@ export const GET_LAUNCHES = gql`
     launchesPast(limit: 10) {
     missionName: mission_name
     launchDate: launch_date_local
-    launch_site {
-      site_name_long
-    }
     links {
       article_link
       launchImages: flickr_images

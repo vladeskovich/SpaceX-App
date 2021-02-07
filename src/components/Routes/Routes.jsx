@@ -1,8 +1,10 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import LaunchList from "../LaunchList";
-import Header from "../Header";
+
+import LaunchList from '../LaunchList';
+import LaunchDetail from '../LaunchDetail';
+import NotFound from '../NotFound';
+
 import './Routes.scss';
 
 const routes = [
@@ -14,11 +16,11 @@ const routes = [
   {
     path: '/launch/:launchId',
     exact: true,
-    component: Header,
+    component: LaunchDetail,
   },
-  /*{
+  {
     component: NotFound,
-  },*/
+  },
 ];
 
 const Routes = (props) => (
@@ -32,9 +34,5 @@ const Routes = (props) => (
     ))}
   </Switch>
 );
-
-Routes.propTypes = {};
-
-Routes.defaultProps = {};
 
 export default Routes;

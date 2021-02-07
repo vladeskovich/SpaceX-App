@@ -13,27 +13,26 @@
     border: 1px solid #008AB7;
   }
 
-  .launch__item-info {
+  &__item-info {
     position: relative;
     padding: 26px 15px 32px 15px;
 
-    &__name {
+    .name {
       padding: 20px 0 16px 0;
       font-size: 24px;
       font-weight: 600;
     }
 
-    &__rocket-name {
+    .rocket-name {
       padding-bottom: 8px;
 
-      span {
+      &_emphasis-text {
         color: #686868;
       }
     }
 
-    //дать имя класса
-    &__launch-status {
-      span {
+    .launch-status {
+      &_emphasis-text {
         color: #686868;
       }
     }

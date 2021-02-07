@@ -6,16 +6,20 @@ import ListItem from '../ListItem';
 import './LaunchList.scss';
 
 const LaunchList = () => {
-  const { loading, error, data } = useQuery(GET_LAUNCHES);
+  const { loading, data } = useQuery(GET_LAUNCHES);
 
-  return <div className="list-launch">
+  const { launchesPast = {} } = data || {};
+
+  return (
+    <div className="list-launch">
     {!loading && (
-      <MasonryItem data={data.launchesPast}>
-        <ListItem/>
+      <MasonryItem data={launchesPast}>
+        {(launch, key) => <ListItem {...launch} key={key}/>}
       </MasonryItem>
     )
     }
-  </div>;
+  </div>
+  );
 };
 
 export default LaunchList;

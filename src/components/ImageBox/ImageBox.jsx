@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import Image from '../Image';
 import Typography from '../Typography';
 import getDeclinationNumber from '../../utils/getDeclinationNumber';
+
 import './ImageBox.scss';
 
 const ImageBox = ({ images }) => {
@@ -13,7 +15,7 @@ const ImageBox = ({ images }) => {
     <>
       {!!images.length && <div className="launch-image-box">
         <div className="launch-image-box__top-bar">
-          <Typography className="launch-image-box__top-bar__text">{numberImages}</Typography>
+          <Typography className="text">{numberImages}</Typography>
         </div>
         <div className="launch-image-box_shadow-bottom"></div>
         <Image
@@ -26,6 +28,8 @@ const ImageBox = ({ images }) => {
   );
 };
 
-ImageBox.propTypes = {};
+ImageBox.propTypes = {
+  images: PropTypes.array,
+};
 
 export default ImageBox;

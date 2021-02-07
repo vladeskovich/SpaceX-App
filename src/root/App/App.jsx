@@ -3,11 +3,12 @@ import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  ApolloConsumer,
 } from '@apollo/client';
-import { useLocation, useRouteMatch } from 'react-router-dom';
+
 import Header from '../../components/Header';
 import Routes from '../../components/Routes';
+import Footer from '../../components/Footer';
+
 import './App.scss';
 
 const client = new ApolloClient({
@@ -17,9 +18,10 @@ const client = new ApolloClient({
 
 const App = () => (
   <ApolloProvider client={client}>
-    <div className="appWrapper">
+    <div className="app-wrapper">
       <Header/>
       <Routes/>
+      <Footer/>
     </div>
   </ApolloProvider>
 );
