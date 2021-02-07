@@ -6,7 +6,7 @@ import './MasonryItem.scss';
 const MasonryItem = ({ data, children: renderItem }) => (
     <ResponsiveMasonry
       columnsCountBreakPoints={{
-        350: 1, 768: 3, 1000: 4, 1200: 5,
+        374: 1, 375: 2, 768: 3, 1000: 4, 1200: 5,
       }}
     >
       <Masonry gutter={16}>
